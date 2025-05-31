@@ -1,9 +1,10 @@
 "GameInfo"
 {
-	game 		"My First HL2 Mod"
-	title 		"HALF-LIFE'"
+	game 		"Mestari Varas auto"
+	title 		"Mestari Varas auto"
 	title2		""
 	supportsvr	1
+	Icon 		game.tga
 
 	type		singleplayer_only
 
