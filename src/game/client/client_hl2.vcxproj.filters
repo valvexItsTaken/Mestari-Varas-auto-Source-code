@@ -46,6 +46,12 @@
     <Filter Include="VPC Scripts">
       <UniqueIdentifier>{A40EE377-781A-C6B9-0C7C-B3BE118D248E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mestari Varas auto">
+      <UniqueIdentifier>{63cfecb3-fae7-481b-96c8-299ed2d7e2ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{3109ab45-f987-4f84-96a8-54f27ff0bac8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\lib\public\bitmap.lib">
@@ -1880,6 +1886,12 @@
     <ClInclude Include="toolframework_client.h">
       <Filter>Tool Framework</Filter>
     </ClInclude>
+    <ClInclude Include="convar_firstperson.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgui_keypad.h">
+      <Filter>Mestari Varas auto</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mp3player.cpp">
@@ -3366,6 +3378,12 @@
     </ClCompile>
     <ClCompile Include="toolframework_client.cpp">
       <Filter>Tool Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="vgui_keypad.cpp">
+      <Filter>Mestari Varas auto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\server\hud_tasklist.cpp">
+      <Filter>Mestari Varas auto</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

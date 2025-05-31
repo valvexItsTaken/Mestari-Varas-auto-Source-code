@@ -69,6 +69,7 @@
 #include "dt_utlvector_send.h"
 #include "vote_controller.h"
 #include "ai_speech.h"
+#include "point_keypad.h"
 
 #if defined USES_ECON_ITEMS
 #include "econ_wearable.h"
@@ -6525,6 +6526,7 @@ bool CBasePlayer::ClientCommand( const CCommand &args )
 		return true;
 	}
 	else if ( stricmp( cmd, "playerperf" ) == 0 )
+
 	{
 		int nRecip = entindex();
 		if ( args.ArgC() >= 2 )
@@ -6544,8 +6546,62 @@ bool CBasePlayer::ClientCommand( const CCommand &args )
 		}
 		return true;
 	}
+	//Keypad
+	else if (stricmp(cmd, "keypad_codematch"))
+	{
+
+		CBaseEntity *pEntity = NULL;
+
+		//while ((pEntity = gEntList.FindEntityByClassnameWithin(pEntity, "player", GetLocalOrigin(), 512)) != NULL)
+		//	CBasePlayer *pPlayer = ToBasePlayer(pEntity);
+
+		while ((pEntity = gEntList.FindEntityInSphere(pEntity, GetLocalOrigin(), 512)) != NULL)//512 
+		{
+			if (FClassnameIs(pEntity, "point_keypad"))
+			{
+				edict_t *pFind;
+				pFind = pEntity->edict();
+
+				CBaseEntity *pEnt = CBaseEntity::Instance(pFind);
+				CPointKeypad *pKeypadSettings = (CPointKeypad *)pEnt;
+
+				//DevMsg("code_match - firing FireTarget\n");
+
+				pKeypadSettings->FireTarget();
+
+				return true;
+			}
+		}
+	}
+	else if (stricmp(cmd, "keypad_codedismatch"))
+	{
+		CBaseEntity *pEntity = NULL;
+
+		//	while ((pEntity = gEntList.FindEntityByClassnameWithin(pEntity, "player", GetLocalOrigin(), 512)) != NULL)
+		//	CBasePlayer *pPlayer = ToBasePlayer(pEntity);
+
+		//same as above, but calls a different function
+		while ((pEntity = gEntList.FindEntityInSphere(pEntity, GetLocalOrigin(), 512)) != NULL)//512
+		{
+			if (FClassnameIs(pEntity, "point_keypad"))
+			{
+				edict_t *pFind;
+				pFind = pEntity->edict();
+
+				CBaseEntity *pEnt = CBaseEntity::Instance(pFind);
+				CPointKeypad *pKeypadSettings = (CPointKeypad *)pEnt;
+
+				//DevMsg("code_dismatch - firing WrongCode\n");
+
+				pKeypadSettings->WrongCode();
+
+				return true;
+			}
+		}
+	}
 
 	return false;
+
 }
 
 extern bool UTIL_ItemCanBeTouchedByPlayer( CBaseEntity *pItem, CBasePlayer *pPlayer );

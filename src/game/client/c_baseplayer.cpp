@@ -41,6 +41,9 @@
 #include "fx.h"
 #include "dt_utlvector_recv.h"
 #include "cam_thirdperson.h"
+
+#include "convar_firstperson.h"
+
 #if defined( REPLAY_ENABLED )
 #include "replay/replaycamera.h"
 #include "replay/ireplaysystem.h"
@@ -1388,11 +1391,43 @@ bool C_BasePlayer::ShouldDraw()
 	return ShouldDrawThisPlayer() && BaseClass::ShouldDraw();
 }
 
+extern ConVar cl_legs;
+extern ConVar cl_legs_origin_shift;
+extern ConVar cl_legs_clip_height;
+
+const Vector &C_BasePlayer::GetRenderOrigin(void)
+{
+	// If we're not observing this player, or if we're not drawing it at the
+	// moment then use the normal absolute origin.
+	// NOTE: the GetCurrentlyDrawingEntity check is here to make sure the
+	// shadow is rendered from the correct origin
+	if (!IsInEye() || view->GetCurrentlyDrawingEntity() != this)
+		return BaseClass::GetRenderOrigin();
+
+	// Get the forward vector
+	static Vector forward; // static because this method returns a reference
+	AngleVectors(GetRenderAngles(), &forward);
+
+	// Shift the render origin by a fixed amount
+	forward *= cl_legs_origin_shift.GetFloat();
+	forward += GetAbsOrigin();
+
+	return forward;
+}
+
 int C_BasePlayer::DrawModel( int flags )
 {
 #ifndef PORTAL
 	// In Portal this check is already performed as part of
 	// C_Portal_Player::DrawModel()
+	CMatRenderContextPtr context(materials);
+
+	if (cl_legs_clip_height.GetInt() > 0)
+	{
+		context->SetHeightClipMode(MATERIAL_HEIGHTCLIPMODE_RENDER_BELOW_HEIGHT);
+		context->SetHeightClipZ(GetAbsOrigin().z + cl_legs_clip_height.GetFloat());
+	}
+
 	if ( !ShouldDrawThisPlayer() )
 	{
 		return 0;
@@ -2682,6 +2717,19 @@ bool IsInFreezeCam( void )
 		return true;
 
 	return false;
+}
+
+bool IsInEye(void)
+{
+	C_BasePlayer *pPlayer = C_BasePlayer::GetLocalPlayer();
+	if (pPlayer && pPlayer->GetObserverMode() == OBS_MODE_IN_EYE)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 //-----------------------------------------------------------------------------
