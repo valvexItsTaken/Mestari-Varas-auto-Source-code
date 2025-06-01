@@ -3442,14 +3442,17 @@
     <ClCompile Include="toolframework_server.cpp">
       <Filter>Tools Framework</Filter>
     </ClCompile>
-    <ClCompile Include="sdk_modelentity.cpp">
-      <Filter>Mestari Varas auto</Filter>
-    </ClCompile>
     <ClCompile Include="point_keypad.cpp">
       <Filter>Mestari Varas auto</Filter>
     </ClCompile>
     <ClCompile Include="EnvHudTasklist.cpp">
       <Filter>Mestari Varas auto</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk_modelentity.cpp">
+      <Filter>Mestari Varas auto</Filter>
+    </ClCompile>
+    <ClCompile Include="physgun.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

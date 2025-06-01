@@ -1,7 +1,5 @@
 #include "cbase.h"
 
-#define	ENTITY_MODEL	"models/gibs/airboat_broken_engine.mdl"
-
 class CMyModelEntity : public CBaseAnimating
 {
 public:
@@ -43,6 +41,9 @@ DEFINE_INPUTFUNC(FIELD_VOID, "Toggle", InputToggle),
 DEFINE_THINKFUNC(MoveThink),
 
 END_DATADESC()
+
+// Name of our entity's model
+#define	ENTITY_MODEL	"models/gibs/airboat_broken_engine.mdl"
 
 //-----------------------------------------------------------------------------
 // Purpose: Precache assets used by the entity
@@ -91,7 +92,6 @@ void CMyModelEntity::MoveThink(void)
 	// Think at 20Hz
 	SetNextThink(gpGlobals->curtime + 0.05f);
 }
-
 //-----------------------------------------------------------------------------
 // Purpose: Toggle the movement of the entity
 //-----------------------------------------------------------------------------
@@ -126,4 +126,3 @@ void CMyModelEntity::InputToggle(inputdata_t &inputData)
 		m_bActive = false;
 	}
 }
-

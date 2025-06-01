@@ -3073,9 +3073,6 @@
     <ClCompile Include="hl2\c_weapon_crossbow.cpp">
       <Filter>Source Files\HL2 DLL</Filter>
     </ClCompile>
-    <ClCompile Include="hl2\c_weapon_physcannon.cpp">
-      <Filter>Source Files\HL2 DLL</Filter>
-    </ClCompile>
     <ClCompile Include="hl2\c_weapon_stunstick.cpp">
       <Filter>Source Files\HL2 DLL</Filter>
     </ClCompile>
@@ -3384,6 +3381,12 @@
     </ClCompile>
     <ClCompile Include="..\server\hud_tasklist.cpp">
       <Filter>Mestari Varas auto</Filter>
+    </ClCompile>
+    <ClCompile Include="hl2\c_weapon_gravitygun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hl2\c_weapon_physcannon.cpp">
+      <Filter>Source Files\HL2 DLL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
