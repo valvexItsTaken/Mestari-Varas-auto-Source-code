@@ -4,7 +4,7 @@
 	title 		"Mestari Varas auto"
 	title2		""
 	supportsvr	1
-	Icon 		game.tga
+	Icon 		logo.tga
 
 	type		singleplayer_only
 
