@@ -46,7 +46,7 @@ public:
 	~CGravityPellet();
 	void Precache()
 	{
-		SetModelName( MAKE_STRING( "models/props_lab/binderredlabel.mdl" ) );
+		SetModelName( MAKE_STRING( "models/weapons/glueblob.mdl" ) );
 		PrecacheModel( STRING( GetModelName() ) );
 		BaseClass::Precache();
 	}
