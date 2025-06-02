@@ -24,10 +24,10 @@
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
-ConVar phys_gunmass("phys_gunmass", "200");
+ConVar phys_gunmass("phys_gunmass", "20000");
 ConVar phys_gunvel("phys_gunvel", "400");
 ConVar phys_gunforce("phys_gunforce", "5e5" );
-ConVar phys_guntorque("phys_guntorque", "100" );
+ConVar phys_guntorque("phys_guntorque", "10000" );
 ConVar phys_gunglueradius("phys_gunglueradius", "128" );
 
 static int g_physgunBeam;

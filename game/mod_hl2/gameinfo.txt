@@ -4,7 +4,7 @@
 	title 		"Mestari Varas auto"
 	title2		""
 	supportsvr	1
-	Icon 		logo.tga
+	icon 		"resource/icon"
 
 	type		singleplayer_only
 
@@ -40,6 +40,7 @@
 			// Note that this folder is scanned only when the game is booted.
 			game+mod			hl2/custom/*
 			game+mod			h12_mod/*
+			game+mod			Mestari Varas auto/*
 
 			// Now search loose files.  We'll set the directory containing the gameinfo.txt file
 			// as the first "mod" search path (after any user customizations).  This is also the one

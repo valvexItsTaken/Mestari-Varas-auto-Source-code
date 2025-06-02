@@ -1,0 +1,275 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "wav"
+  {
+    event speak "npc_t_02_a"
+    {
+      time 0.233333 5.920998
+      param "npc_t_02_a"
+      param2 "0.900"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "npc_t_02_b"
+    {
+      time 6.006667 7.053878
+      param "npc_t_02_b"
+      param2 "0.900"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "npc_t_03"
+    {
+      time 14.246669 17.511112
+      param "npc_t_03"
+      param2 "0.800"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "felx"
+    {
+      time 0.006667 7.246665
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lid_raiser" combo 
+        {
+          0.8880 0.8740
+          1.0873 1.0000
+          4.2123 0.8281
+          4.8843 0.7034
+        }
+        {
+          0.8880 0.5000
+          1.0873 0.5000
+          4.2123 0.5000
+          4.8843 0.5000
+        }
+        "blink" 
+        {
+          0.8880 0.2185
+          1.0873 0.2500
+          4.2123 0.2070
+          4.8843 0.1759
+        }
+        "lowerer" combo 
+        {
+          0.8880 0.3933
+          1.0873 0.4500
+          4.2123 0.3727
+          4.8843 0.3165
+        }
+        {
+          0.8880 0.5000
+          1.0873 0.5000
+          4.2123 0.5000
+          4.8843 0.5000
+        }
+        "part" combo 
+        {
+          4.2123 0.0000
+          4.8843 0.0000
+        }
+        {
+          4.2123 0.5000
+          4.8843 0.5000
+        }
+        "head_tilt" range 15.0 -15.0 
+        {
+          4.2123 1.0000
+          4.8843 0.4900
+        }
+      }
+    }
+  }
+  channel "gen"
+  {
+    event gesture "gen"
+    {
+      time 0.186666 2.153333
+      param "P_leanforward"
+      absolutetags playback_time
+      {
+        "apex" 0.258621
+        "extreme" 0.362069
+        "loop" 0.431034
+        "end" 0.620690
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.258621
+        "extreme" 0.362069
+        "loop" 0.431034
+        "end" 0.620690
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "gen2"
+    {
+      time 3.080000 5.380000
+      param "HG_headback"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+    }
+    event gesture "gen3"
+    {
+      time 5.419999 7.719999
+      param "HG_forwardright"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+    event gesture "gen 4"
+    {
+      time 14.059999 16.026667
+      param "P_leanright"
+      absolutetags playback_time
+      {
+        "apex" 0.189655
+        "extreme" 0.241379
+        "loop" 0.293103
+        "end" 0.655172
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.189655
+        "extreme" 0.241379
+        "loop" 0.293103
+        "end" 0.655172
+      }
+      sequenceduration 1.966667
+    }
+    event gesture "gen 5"
+    {
+      time 16.286667 18.586666
+      param "HG_forwardleft"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      sequenceduration 2.300000
+    }
+    event moveto "move 2"
+    {
+      time 20.946667 33.033340
+      param "point_go_here_idk"
+      param2 "Walk"
+      param3 "!target1"
+      distancetotarget 1.00
+    }
+    event firetrigger "next act"
+    {
+      time 33.306664 -1.000000
+      param "3"
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look"
+    {
+      time -0.006666 7.573332
+      param "!player"
+    }
+    event moveto "MOVE 1"
+    {
+      time 7.713334 12.999999
+      param "Mah keypad_2"
+      param2 "Walk"
+      param3 "!target1"
+      distancetotarget 8.00
+    }
+    event lookat "player 2"
+    {
+      time 13.806669 20.286665
+      param "!player"
+    }
+    event firetrigger "1"
+    {
+      time 13.340002 -1.000000
+      param "1"
+    }
+    event firetrigger "2"
+    {
+      time 17.820000 -1.000000
+      param "2"
+    }
+    event lookat "look idk"
+    {
+      time 20.833332 23.119997
+      param "!player"
+    }
+  }
+  channel "face"
+  {
+    event face "face 1"
+    {
+      time 0.013333 7.099999
+      param "!player"
+    }
+    event face "face 2"
+    {
+      time 13.860000 19.986668
+      param "!player"
+    }
+    event face "face idk"
+    {
+      time 20.766668 23.106668
+      param "!player"
+    }
+  }
+  faceposermodel "models\gman.mdl"
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\testbox.bsp"
+scalesettings
+{
+  "CChoreoView" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

@@ -1,0 +1,160 @@
+// Choreo version 1
+actor "!target2"
+{
+  channel "wav"
+  {
+    event speak "npc_t_01"
+    {
+      time 3.672415 6.639218
+      param "npc_t_01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "Flex 2"
+    {
+      time 0.024692 7.006173
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+      }
+    }
+  }
+  channel "gen"
+  {
+  }
+  channel "look"
+  {
+    event lookat "look"
+    {
+      time 0.012345 6.960196
+      param "!target1"
+    }
+  }
+  faceposermodel "models\gman.mdl"
+}
+
+actor "!target1"
+{
+  channel "wav"
+  {
+    event firetrigger "StartScene"
+    {
+      time 0.000000 -1.000000
+      param "1"
+      resumecondition
+    }
+    event speak "npc_v_01_b"
+    {
+      time 1.345785 3.331091
+      param "npc_v_01_b"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "npc_v_02"
+    {
+      time 7.294446 16.733356
+      param "npc_v_02"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "Flex 1"
+    {
+      time 0.000000 5.314815
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+      }
+    }
+    event firetrigger "2"
+    {
+      time 7.227778 -1.000000
+      param "2"
+    }
+    event moveto "move"
+    {
+      time 7.205804 16.994694
+      param "hack"
+      param2 "Walk"
+      param3 "!target1"
+    }
+  }
+  channel "real gen"
+  {
+    event gesture "Gen1"
+    {
+      time 0.043210 2.176543
+      param "B_bg_hipback"
+      absolutetags playback_time
+      {
+        "apex" 0.126984
+        "extreme" 0.206349
+        "loop" 0.476191
+        "end" 0.555556
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.126984
+        "extreme" 0.206349
+        "loop" 0.476191
+        "end" 0.555556
+      }
+      sequenceduration 2.133333
+    }
+    event gesture "NULL"
+    {
+      time 2.191359 7.112049
+      param "B_g_pray"
+      absolutetags playback_time
+      {
+        "apex" 0.164538
+        "accent" 0.274230
+        "loop" 0.342787
+        "end" 0.377066
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.289157
+        "accent" 0.481928
+        "loop" 0.602410
+        "end" 0.662651
+      }
+      sequenceduration 2.800000
+    }
+    event lookat "jujyujuyjuy"
+    {
+      time 7.281610 16.982759
+      param "cam_2"
+    }
+  }
+  channel "look"
+  {
+    event lookat "Look at 2"
+    {
+      time 0.020000 7.110678
+      param "!target2"
+    }
+  }
+  faceposermodel "models\breen.mdl"
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\testbox.bsp"
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "116"
+}
+fps 60
+snap off
+ignorePhonemes off

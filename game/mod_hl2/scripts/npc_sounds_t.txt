@@ -1,0 +1,65 @@
+"npc_t_01"          //This will be used inside the closedcaptions and sounds manifest file, name this whatever you want, but make sure they're uniquely named
+{
+   "channel"   "CHAN_VOICE"       // This is the audio channel that the file will use, you can use CHAN_VOICE for npc voice
+   "volume"   "0.8"              // This is the audio level of the file, 0.6 is fine for normal dialogue
+   "pitch"      "PITCH_NORM"          // This is the pitch, no need to touch this
+
+   "soundlevel"   "SNDLVL_TALKING"         // Similar to the volume but can be used to make the npc be heard from large distances
+
+   "wave"      "vo\t\npc_t_01.wav"         // this is the audio file
+}
+
+"npc_t_02"          //This will be used inside the closedcaptions and sounds manifest file, name this whatever you want, but make sure they're uniquely named
+{
+   "channel"   "CHAN_VOICE"       // This is the audio channel that the file will use, you can use CHAN_VOICE for npc voice
+   "volume"   "0.9"              // This is the audio level of the file, 0.6 is fine for normal dialogue
+   "pitch"      "PITCH_NORM"          // This is the pitch, no need to touch this
+
+   "soundlevel"   "SNDLVL_TALKING"         // Similar to the volume but can be used to make the npc be heard from large distances
+
+   "wave"      "vo\t\npc_t_02.wav"         // this is the audio file
+}
+
+"npc_t_02_a"          //This will be used inside the closedcaptions and sounds manifest file, name this whatever you want, but make sure they're uniquely named
+{
+   "channel"   "CHAN_VOICE"       // This is the audio channel that the file will use, you can use CHAN_VOICE for npc voice
+   "volume"   "0.9"              // This is the audio level of the file, 0.6 is fine for normal dialogue
+   "pitch"      "PITCH_NORM"          // This is the pitch, no need to touch this
+
+   "soundlevel"   "SNDLVL_TALKING"         // Similar to the volume but can be used to make the npc be heard from large distances
+
+   "wave"      "vo\t\npc_t_02_a.wav"         // this is the audio file
+}
+
+"npc_t_02_b"          //This will be used inside the closedcaptions and sounds manifest file, name this whatever you want, but make sure they're uniquely named
+{
+   "channel"   "CHAN_VOICE"       // This is the audio channel that the file will use, you can use CHAN_VOICE for npc voice
+   "volume"   "0.9"              // This is the audio level of the file, 0.6 is fine for normal dialogue
+   "pitch"      "PITCH_NORM"          // This is the pitch, no need to touch this
+
+   "soundlevel"   "SNDLVL_TALKING"         // Similar to the volume but can be used to make the npc be heard from large distances
+
+   "wave"      "vo\t\npc_t_02_b.wav"         // this is the audio file
+}
+
+"npc_t_03"          //This will be used inside the closedcaptions and sounds manifest file, name this whatever you want, but make sure they're uniquely named
+{
+   "channel"   "CHAN_VOICE"       // This is the audio channel that the file will use, you can use CHAN_VOICE for npc voice
+   "volume"   "0.9"              // This is the audio level of the file, 0.6 is fine for normal dialogue
+   "pitch"      "PITCH_NORM"          // This is the pitch, no need to touch this
+
+   "soundlevel"   "SNDLVL_TALKING"         // Similar to the volume but can be used to make the npc be heard from large distances
+
+   "wave"      "vo\t\npc_t_03.wav"         // this is the audio file
+}
+
+"npc_t_04"          //This will be used inside the closedcaptions and sounds manifest file, name this whatever you want, but make sure they're uniquely named
+{
+   "channel"   "CHAN_VOICE"       // This is the audio channel that the file will use, you can use CHAN_VOICE for npc voice
+   "volume"   "0.9"              // This is the audio level of the file, 0.6 is fine for normal dialogue
+   "pitch"      "PITCH_NORM"          // This is the pitch, no need to touch this
+
+   "soundlevel"   "SNDLVL_TALKING"         // Similar to the volume but can be used to make the npc be heard from large distances
+
+   "wave"      "vo\t\npc_t_04.wav"         // this is the audio file
+}

@@ -1,0 +1,231 @@
+// Choreo version 1
+actor "!target1"
+{
+  channel "wav"
+  {
+    event speak "npc_v_03"
+    {
+      time 2.866666 4.642993
+      param "npc_v_03"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+    event speak "npc_v_04"
+    {
+      time 5.860000 7.752426
+      param "npc_v_04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+  }
+  channel "gen"
+  {
+    event gesture "hfhjghj"
+    {
+      time 2.426666 5.226666
+      param "B_g_pray"
+      absolutetags playback_time
+      {
+        "apex" 0.289157
+        "accent" 0.481928
+        "loop" 0.602410
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.289157
+        "accent" 0.481928
+        "loop" 0.602410
+        "end" 0.662651
+      }
+    }
+    event gesture "ffffgg"
+    {
+      time 5.720000 8.520000
+      param "B_g_palmsout"
+      absolutetags playback_time
+      {
+        "apex" 0.216867
+        "accent" 0.481928
+        "loop" 0.602410
+        "end" 0.662651
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.216867
+        "accent" 0.481928
+        "loop" 0.602410
+        "end" 0.662651
+      }
+    }
+    event gesture "hjgjh"
+    {
+      time 0.026667 1.826667
+      param "b_bg_upheaddwn"
+      absolutetags playback_time
+      {
+        "apex" 0.169811
+        "extreme" 0.283019
+        "loop" 0.377358
+        "end" 0.471698
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.169811
+        "extreme" 0.283019
+        "loop" 0.377358
+        "end" 0.471698
+      }
+    }
+  }
+  channel "look'"
+  {
+    event lookat "ffff"
+    {
+      time 0.046667 4.666667
+      param "!target2"
+    }
+    event lookat "fgfggfg"
+    {
+      time 5.026667 9.520000
+      param "!player"
+    }
+  }
+  channel "idk"
+  {
+    event face "fffffff"
+    {
+      time 0.073333 4.666666
+      param "!target2"
+    }
+    event face "ffffgfg"
+    {
+      time 5.000000 9.513333
+      param "!player"
+    }
+  }
+  faceposermodel "models\breen.mdl"
+}
+
+actor "!target2"
+{
+  channel "wav"
+  {
+    event speak "npc_t_04"
+    {
+      time 0.186667 2.448028
+      param "npc_t_04"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gen"
+  {
+    event gesture "gen"
+    {
+      time 0.120000 2.586667
+      param "G_lefthand_sweepout"
+      absolutetags playback_time
+      {
+        "apex" 0.191781
+        "accent" 0.479452
+        "loop" 0.616438
+        "end" 0.753425
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.191781
+        "accent" 0.479452
+        "loop" 0.616438
+        "end" 0.753425
+      }
+    }
+    event gesture "hjjhh"
+    {
+      time 3.101852 5.401852
+      param "HG_headforward"
+      absolutetags playback_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.264706
+        "extreme" 0.367647
+        "loop" 0.441176
+        "end" 0.735294
+      }
+    }
+    event gesture "gghfghfgh"
+    {
+      time 6.453043 8.919710
+      param "G_lefthand_punct"
+      absolutetags playback_time
+      {
+        "apex" 0.246575
+        "accent" 0.383562
+        "loop" 0.479452
+        "end" 0.684932
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.246575
+        "accent" 0.383562
+        "loop" 0.479452
+        "end" 0.684932
+      }
+    }
+  }
+  channel "flex"
+  {
+  }
+  channel "look"
+  {
+    event lookat "look atviljo"
+    {
+      time 0.126666 6.846666
+      param "!target1"
+    }
+    event lookat "hhhg"
+    {
+      time 7.020000 9.533334
+      param "!player"
+    }
+  }
+  channel "idk"
+  {
+    event face "face"
+    {
+      time 0.080000 5.993333
+      param "!target1"
+    }
+    event face "jgghj"
+    {
+      time 6.140000 9.533334
+      param "!player"
+    }
+  }
+  faceposermodel "models\gman.mdl"
+}
+
+mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\testbox.bsp"
+scalesettings
+{
+  "CChoreoView" "112"
+  "RampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
