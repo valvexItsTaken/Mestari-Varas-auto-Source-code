@@ -25,6 +25,45 @@ actor "!target2"
   }
   channel "gen"
   {
+    event gesture "jghgh"
+    {
+      time 0.132184 2.098850
+      param "P_leanback"
+      absolutetags playback_time
+      {
+        "apex" 0.293103
+        "extreme" 0.431034
+        "loop" 0.568965
+        "end" 0.758621
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.293103
+        "extreme" 0.431034
+        "loop" 0.568965
+        "end" 0.758621
+      }
+    }
+    event gesture "tryhh"
+    {
+      time 4.408047 7.041380
+      param "G_lefthand_palmout"
+      absolutetags playback_time
+      {
+        "apex" 0.141026
+        "accent" 0.358974
+        "loop" 0.448718
+        "end" 0.705128
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.141026
+        "accent" 0.358974
+        "loop" 0.448718
+        "end" 0.705128
+      }
+      sequenceduration 2.633333
+    }
   }
   channel "look"
   {
@@ -59,6 +98,7 @@ actor "!target1"
     {
       time 7.294446 16.733356
       param "npc_v_02"
+      param2 "VOL_NORM"
       fixedlength
       cctype "cc_master"
       cctoken ""

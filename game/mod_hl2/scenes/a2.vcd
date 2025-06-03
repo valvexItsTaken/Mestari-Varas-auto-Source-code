@@ -35,8 +35,14 @@ actor "!target1"
   {
     event flexanimation "felx"
     {
-      time 0.006667 7.246665
+      time 0.006667 16.486666
       param ""
+      tags
+      {
+        "1" 0.002428
+        "2" 0.486847
+        "2" 0.830433
+      }
       flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
       {
         "lid_raiser" combo 
@@ -86,6 +92,14 @@ actor "!target1"
           4.2123 1.0000
           4.8843 0.4900
         }
+      }
+    }
+    event flexanimation "thrgf"
+    {
+      time 16.580000 23.893332
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
       }
     }
   }
@@ -258,17 +272,28 @@ actor "!target1"
       param "!player"
     }
   }
+  channel "walk"
+  {
+    event moveto "goto"
+    {
+      time 0.026667 1.053334
+      param "!player"
+      param2 "Walk"
+      param3 "!target1"
+      distancetotarget 5.00
+    }
+  }
   faceposermodel "models\gman.mdl"
 }
 
 mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\testbox.bsp"
 scalesettings
 {
-  "CChoreoView" "100"
-  "RampTool" "100"
-  "SceneRampTool" "100"
-  "ExpressionTool" "100"
   "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "100"
 }
 fps 60
 snap off

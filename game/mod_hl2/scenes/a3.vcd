@@ -5,7 +5,7 @@ actor "!target1"
   {
     event speak "npc_v_03"
     {
-      time 2.866666 4.642993
+      time 2.866666 4.642992
       param "npc_v_03"
       fixedlength
       cctype "cc_master"
@@ -18,6 +18,17 @@ actor "!target1"
       fixedlength
       cctype "cc_master"
       cctoken ""
+    }
+    event sequence "console_left"
+    {
+      time 9.916666 12.549999
+      param "console_left"
+      fixedlength
+    }
+    event firetrigger "1"
+    {
+      time 12.674243 -1.000000
+      param "1"
     }
   }
   channel "flex"
@@ -62,6 +73,7 @@ actor "!target1"
         "loop" 0.602410
         "end" 0.662651
       }
+      sequenceduration 2.800000
     }
     event gesture "hjgjh"
     {
@@ -92,7 +104,7 @@ actor "!target1"
     }
     event lookat "fgfggfg"
     {
-      time 5.026667 9.520000
+      time 5.026667 12.555716
       param "!player"
     }
   }
@@ -105,8 +117,13 @@ actor "!target1"
     }
     event face "ffffgfg"
     {
-      time 5.000000 9.513333
+      time 5.000000 6.346666
       param "!player"
+    }
+    event face "gg"
+    {
+      time 6.452381 12.547619
+      param "!target2"
     }
   }
   faceposermodel "models\breen.mdl"
@@ -145,6 +162,7 @@ actor "!target2"
         "loop" 0.616438
         "end" 0.753425
       }
+      sequenceduration 2.466667
     }
     event gesture "hjjhh"
     {
@@ -183,6 +201,7 @@ actor "!target2"
         "loop" 0.479452
         "end" 0.684932
       }
+      sequenceduration 2.466667
     }
   }
   channel "flex"
@@ -220,7 +239,7 @@ actor "!target2"
 mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\testbox.bsp"
 scalesettings
 {
-  "CChoreoView" "112"
+  "CChoreoView" "88"
   "RampTool" "100"
   "ExpressionTool" "100"
   "GestureTool" "100"
