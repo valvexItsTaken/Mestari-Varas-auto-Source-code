@@ -14,7 +14,7 @@ actor "!target1"
     }
     event speak "npc_t_02_b"
     {
-      time 6.006667 7.053878
+      time 5.926667 6.973878
       param "npc_t_02_b"
       param2 "0.900"
       fixedlength
@@ -206,7 +206,7 @@ actor "!target1"
     }
     event moveto "move 2"
     {
-      time 20.946667 33.033340
+      time 20.946667 41.713341
       param "point_go_here_idk"
       param2 "Walk"
       param3 "!target1"
@@ -214,7 +214,7 @@ actor "!target1"
     }
     event firetrigger "next act"
     {
-      time 33.306664 -1.000000
+      time 41.866665 -1.000000
       param "3"
     }
   }
@@ -229,7 +229,7 @@ actor "!target1"
     {
       time 7.713334 12.999999
       param "Mah keypad_2"
-      param2 "Walk"
+      param2 "Run"
       param3 "!target1"
       distancetotarget 8.00
     }
@@ -286,7 +286,7 @@ actor "!target1"
   faceposermodel "models\gman.mdl"
 }
 
-mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\testbox.bsp"
+mapname "C:\Program Files (x86)\Steam\steamapps\sourcemods\Mestari Varas auto\maps\intro.bsp"
 scalesettings
 {
   "GestureTool" "100"

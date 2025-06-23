@@ -54,6 +54,7 @@
 			// system call.)
 			game_lv				hl2/hl2_lv.vpk
 			game_lv				hl2/hl2_textures_dir.vpk
+			game+mod			ep2/ep2_pak.vpk
 			game				|all_source_engine_paths|hl2/hl2_english.vpk
 			game				|all_source_engine_paths|hl2/hl2_pak.vpk
 			game				|all_source_engine_paths|hl2/hl2_textures.vpk
@@ -70,6 +71,7 @@
 			gamebin				hl2_mod/bin
 
 			// Last, mount in shared HL2 loose files
+			game				|all_source_engine_paths|episodic
 			game				|all_source_engine_paths|hl2
 			platform			|all_source_engine_paths|platform
 		}
